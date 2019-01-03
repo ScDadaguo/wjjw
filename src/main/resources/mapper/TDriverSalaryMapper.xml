@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guohao.wjjw.dao.TDriverSalaryMapper">
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TDriverSalary">
+<mapper namespace="com.guohao.wjjw.dao.DriverSalaryDao">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.DriverSalary">
     <id column="pay_order_id" jdbcType="INTEGER" property="payOrderId" />
     <result column="driver_id" jdbcType="INTEGER" property="driverId" />
     <result column="one-time_pay" jdbcType="INTEGER" property="oneTimePay" />
@@ -14,7 +14,7 @@
     delete from t_driver_salary
     where pay_order_id = #{payOrderId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TDriverSalary">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.DriverSalary">
     insert into t_driver_salary (pay_order_id, driver_id, one-time_pay, 
       date, remarks, leave_date, 
       leave_time)
@@ -22,7 +22,7 @@
       #{date,jdbcType=DATE}, #{remarks,jdbcType=VARCHAR}, #{leaveDate,jdbcType=DATE}, 
       #{leaveTime,jdbcType=INTEGER})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TDriverSalary">
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.DriverSalary">
     update t_driver_salary
     set driver_id = #{driverId,jdbcType=INTEGER},
       one-time_pay = #{oneTimePay,jdbcType=INTEGER},
@@ -41,7 +41,7 @@
     select pay_order_id, driver_id, one-time_pay, date, remarks, leave_date, leave_time
     from t_driver_salary
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TDriverSalary">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.DriverSalary">
     <result column="pay_order_id" jdbcType="INTEGER" property="payOrderId" />
     <result column="driver_id" jdbcType="INTEGER" property="driverId" />
     <result column="one-time_pay" jdbcType="INTEGER" property="oneTimePay" />
@@ -50,7 +50,7 @@
     <result column="leave_date" jdbcType="DATE" property="leaveDate" />
     <result column="leave_time" jdbcType="INTEGER" property="leaveTime" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TDriverSalary">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.DriverSalary">
     insert into t_driver_salary (pay_order_id, driver_id, one-time_pay, 
       date, remarks, leave_date, 
       leave_time)
@@ -62,7 +62,7 @@
     select pay_order_id, driver_id, one-time_pay, date, remarks, leave_date, leave_time
     from t_driver_salary
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TDriverSalary">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.DriverSalary">
     <result column="pay_order_id" jdbcType="INTEGER" property="payOrderId" />
     <result column="driver_id" jdbcType="INTEGER" property="driverId" />
     <result column="one-time_pay" jdbcType="INTEGER" property="oneTimePay" />
@@ -71,7 +71,7 @@
     <result column="leave_date" jdbcType="DATE" property="leaveDate" />
     <result column="leave_time" jdbcType="INTEGER" property="leaveTime" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TDriverSalary">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.DriverSalary">
     insert into t_driver_salary (pay_order_id, driver_id, one-time_pay, 
       date, remarks, leave_date, 
       leave_time)

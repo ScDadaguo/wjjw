@@ -2,7 +2,7 @@ package com.guohao.wjjw.entity;
 
 import java.util.Date;
 
-public class TScooterOrder {
+public class ScooterOrder {
     private Integer scooterOrderId;
 
     private String startPlace;

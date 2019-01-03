@@ -2,7 +2,7 @@ package com.guohao.wjjw.entity;
 
 import java.util.Date;
 
-public class TDriverSalary {
+public class DriverSalary {
     private Integer payOrderId;
 
     private Integer driverId;

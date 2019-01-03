@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guohao.wjjw.dao.TBorrowMapper">
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TBorrow">
+<mapper namespace="com.guohao.wjjw.dao.BorrowDao">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Borrow">
     <id column="borrow_order" jdbcType="INTEGER" property="borrowOrder" />
     <result column="machine_id" jdbcType="INTEGER" property="machineId" />
     <result column="brrowdate" jdbcType="DATE" property="brrowdate" />
@@ -11,13 +11,13 @@
     delete from t_borrow
     where borrow_order = #{borrowOrder,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TBorrow">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Borrow">
     insert into t_borrow (borrow_order, machine_id, brrowdate, 
       returndate)
     values (#{borrowOrder,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, #{brrowdate,jdbcType=DATE}, 
       #{returndate,jdbcType=DATE})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TBorrow">
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.Borrow">
     update t_borrow
     set machine_id = #{machineId,jdbcType=INTEGER},
       brrowdate = #{brrowdate,jdbcType=DATE},
@@ -33,13 +33,13 @@
     select borrow_order, machine_id, brrowdate, returndate
     from t_borrow
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TBorrow">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Borrow">
     <result column="borrow_order" jdbcType="INTEGER" property="borrowOrder" />
     <result column="machine_id" jdbcType="INTEGER" property="machineId" />
     <result column="brrowdate" jdbcType="DATE" property="brrowdate" />
     <result column="returndate" jdbcType="DATE" property="returndate" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TBorrow">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Borrow">
     insert into t_borrow (borrow_order, machine_id, brrowdate, 
       returndate)
     values (#{borrowOrder,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, #{brrowdate,jdbcType=DATE}, 
@@ -49,13 +49,13 @@
     select borrow_order, machine_id, brrowdate, returndate
     from t_borrow
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TBorrow">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Borrow">
     <result column="borrow_order" jdbcType="INTEGER" property="borrowOrder" />
     <result column="machine_id" jdbcType="INTEGER" property="machineId" />
     <result column="brrowdate" jdbcType="DATE" property="brrowdate" />
     <result column="returndate" jdbcType="DATE" property="returndate" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TBorrow">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Borrow">
     insert into t_borrow (borrow_order, machine_id, brrowdate, 
       returndate)
     values (#{borrowOrder,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, #{brrowdate,jdbcType=DATE}, 

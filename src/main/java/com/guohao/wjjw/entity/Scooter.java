@@ -1,6 +1,6 @@
 package com.guohao.wjjw.entity;
 
-public class TScooter {
+public class Scooter {
     private Integer scooterId;
 
     private String scooterName;

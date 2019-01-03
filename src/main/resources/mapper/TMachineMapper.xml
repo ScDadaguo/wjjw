@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guohao.wjjw.dao.TMachineMapper">
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TMachine">
+<mapper namespace="com.guohao.wjjw.dao.MachineDao">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Machine">
     <id column="machine_id" jdbcType="INTEGER" property="machineId" />
     <result column="model_number" jdbcType="INTEGER" property="modelNumber" />
     <result column="boss_id" jdbcType="INTEGER" property="bossId" />
@@ -13,7 +13,7 @@
     delete from t_machine
     where machine_id = #{machineId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TMachine">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Machine">
     insert into t_machine (machine_id, model_number, boss_id, 
       buying_price, purchasing_date, usage_time
       )
@@ -21,7 +21,7 @@
       #{buyingPrice,jdbcType=INTEGER}, #{purchasingDate,jdbcType=DATE}, #{usageTime,jdbcType=INTEGER}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TMachine">
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.Machine">
     update t_machine
     set model_number = #{modelNumber,jdbcType=INTEGER},
       boss_id = #{bossId,jdbcType=INTEGER},
@@ -39,7 +39,7 @@
     select machine_id, model_number, boss_id, buying_price, purchasing_date, usage_time
     from t_machine
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TMachine">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Machine">
     <result column="machine_id" jdbcType="INTEGER" property="machineId" />
     <result column="model_number" jdbcType="INTEGER" property="modelNumber" />
     <result column="boss_id" jdbcType="INTEGER" property="bossId" />
@@ -47,7 +47,7 @@
     <result column="purchasing_date" jdbcType="DATE" property="purchasingDate" />
     <result column="usage_time" jdbcType="INTEGER" property="usageTime" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TMachine">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Machine">
     insert into t_machine (machine_id, model_number, boss_id, 
       buying_price, purchasing_date, usage_time
       )
@@ -59,7 +59,7 @@
     select machine_id, model_number, boss_id, buying_price, purchasing_date, usage_time
     from t_machine
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TMachine">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Machine">
     <result column="machine_id" jdbcType="INTEGER" property="machineId" />
     <result column="model_number" jdbcType="INTEGER" property="modelNumber" />
     <result column="boss_id" jdbcType="INTEGER" property="bossId" />
@@ -67,7 +67,7 @@
     <result column="purchasing_date" jdbcType="DATE" property="purchasingDate" />
     <result column="usage_time" jdbcType="INTEGER" property="usageTime" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TMachine">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Machine">
     insert into t_machine (machine_id, model_number, boss_id, 
       buying_price, purchasing_date, usage_time
       )

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guohao.wjjw.dao.TScooterMapper">
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooter">
+<mapper namespace="com.guohao.wjjw.dao.ScooterDao">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Scooter">
     <id column="scooter_id" jdbcType="INTEGER" property="scooterId" />
     <result column="Scooter_name" jdbcType="VARCHAR" property="scooterName" />
     <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
@@ -11,13 +11,13 @@
     delete from t_scooter
     where scooter_id = #{scooterId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooter">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Scooter">
     insert into t_scooter (scooter_id, Scooter_name, phone_number, 
       model_number)
     values (#{scooterId,jdbcType=INTEGER}, #{scooterName,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 
       #{modelNumber,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TScooter">
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.Scooter">
     update t_scooter
     set Scooter_name = #{scooterName,jdbcType=VARCHAR},
       phone_number = #{phoneNumber,jdbcType=VARCHAR},
@@ -33,13 +33,13 @@
     select scooter_id, Scooter_name, phone_number, model_number
     from t_scooter
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooter">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Scooter">
     <result column="scooter_id" jdbcType="INTEGER" property="scooterId" />
     <result column="Scooter_name" jdbcType="VARCHAR" property="scooterName" />
     <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
     <result column="model_number" jdbcType="VARCHAR" property="modelNumber" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooter">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Scooter">
     insert into t_scooter (scooter_id, Scooter_name, phone_number, 
       model_number)
     values (#{scooterId,jdbcType=INTEGER}, #{scooterName,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 
@@ -49,13 +49,13 @@
     select scooter_id, Scooter_name, phone_number, model_number
     from t_scooter
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooter">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Scooter">
     <result column="scooter_id" jdbcType="INTEGER" property="scooterId" />
     <result column="Scooter_name" jdbcType="VARCHAR" property="scooterName" />
     <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
     <result column="model_number" jdbcType="VARCHAR" property="modelNumber" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooter">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Scooter">
     insert into t_scooter (scooter_id, Scooter_name, phone_number, 
       model_number)
     values (#{scooterId,jdbcType=INTEGER}, #{scooterName,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 

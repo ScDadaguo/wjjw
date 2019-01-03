@@ -1,6 +1,6 @@
 package com.guohao.wjjw.entity;
 
-public class TSelina {
+public class Selina {
     private Integer selinaOrder;
 
     private Integer workId;

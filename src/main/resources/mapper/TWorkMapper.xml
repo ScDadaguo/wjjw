@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guohao.wjjw.dao.TWorkMapper">
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TWork">
+<mapper namespace="com.guohao.wjjw.dao.WorkDao">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Work">
     <id column="work_id" jdbcType="INTEGER" property="workId" />
     <result column="driver_id" jdbcType="INTEGER" property="driverId" />
     <result column="machine_id" jdbcType="INTEGER" property="machineId" />
@@ -21,7 +21,7 @@
     delete from t_work
     where work_id = #{workId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TWork">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Work">
     insert into t_work (work_id, driver_id, machine_id, 
       site, employer, Constructors, 
       actual_hours, invoice_hours, diesel_cost, 
@@ -33,7 +33,7 @@
       #{workDate,jdbcType=DATE}, #{cash,jdbcType=INTEGER}, #{scooterOrderId,jdbcType=INTEGER}, 
       #{hourlyWage,jdbcType=INTEGER}, #{receiveCash,jdbcType=INTEGER})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TWork">
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.Work">
     update t_work
     set driver_id = #{driverId,jdbcType=INTEGER},
       machine_id = #{machineId,jdbcType=INTEGER},
@@ -61,7 +61,7 @@
     invoice_hours, diesel_cost, work_date, cash, scooter_order_id, hourly_wage, receive_cash
     from t_work
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TWork">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Work">
     <result column="work_id" jdbcType="INTEGER" property="workId" />
     <result column="driver_id" jdbcType="INTEGER" property="driverId" />
     <result column="machine_id" jdbcType="INTEGER" property="machineId" />
@@ -77,7 +77,7 @@
     <result column="hourly_wage" jdbcType="INTEGER" property="hourlyWage" />
     <result column="receive_cash" jdbcType="INTEGER" property="receiveCash" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TWork">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Work">
     insert into t_work (work_id, driver_id, machine_id, 
       site, employer, Constructors, 
       actual_hours, invoice_hours, diesel_cost, 
@@ -94,7 +94,7 @@
     invoice_hours, diesel_cost, work_date, cash, scooter_order_id, hourly_wage, receive_cash
     from t_work
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TWork">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Work">
     <result column="work_id" jdbcType="INTEGER" property="workId" />
     <result column="driver_id" jdbcType="INTEGER" property="driverId" />
     <result column="machine_id" jdbcType="INTEGER" property="machineId" />
@@ -110,7 +110,7 @@
     <result column="hourly_wage" jdbcType="INTEGER" property="hourlyWage" />
     <result column="receive_cash" jdbcType="INTEGER" property="receiveCash" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TWork">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Work">
     insert into t_work (work_id, driver_id, machine_id, 
       site, employer, Constructors, 
       actual_hours, invoice_hours, diesel_cost, 

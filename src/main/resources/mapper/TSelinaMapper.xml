@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guohao.wjjw.dao.TSelinaMapper">
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TSelina">
+<mapper namespace="com.guohao.wjjw.dao.SelinaDao">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Selina">
     <id column="selina_order" jdbcType="INTEGER" property="selinaOrder" />
     <result column="work_id" jdbcType="INTEGER" property="workId" />
     <result column="selina_salary" jdbcType="INTEGER" property="selinaSalary" />
@@ -10,13 +10,13 @@
     delete from t_selina
     where selina_order = #{selinaOrder,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TSelina">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Selina">
     insert into t_selina (selina_order, work_id, selina_salary
       )
     values (#{selinaOrder,jdbcType=INTEGER}, #{workId,jdbcType=INTEGER}, #{selinaSalary,jdbcType=INTEGER}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TSelina">
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.Selina">
     update t_selina
     set work_id = #{workId,jdbcType=INTEGER},
       selina_salary = #{selinaSalary,jdbcType=INTEGER}
@@ -31,12 +31,12 @@
     select selina_order, work_id, selina_salary
     from t_selina
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TSelina">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Selina">
     <result column="selina_order" jdbcType="INTEGER" property="selinaOrder" />
     <result column="work_id" jdbcType="INTEGER" property="workId" />
     <result column="selina_salary" jdbcType="INTEGER" property="selinaSalary" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TSelina">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Selina">
     insert into t_selina (selina_order, work_id, selina_salary
       )
     values (#{selinaOrder,jdbcType=INTEGER}, #{workId,jdbcType=INTEGER}, #{selinaSalary,jdbcType=INTEGER}
@@ -46,12 +46,12 @@
     select selina_order, work_id, selina_salary
     from t_selina
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TSelina">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.Selina">
     <result column="selina_order" jdbcType="INTEGER" property="selinaOrder" />
     <result column="work_id" jdbcType="INTEGER" property="workId" />
     <result column="selina_salary" jdbcType="INTEGER" property="selinaSalary" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TSelina">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.Selina">
     insert into t_selina (selina_order, work_id, selina_salary
       )
     values (#{selinaOrder,jdbcType=INTEGER}, #{workId,jdbcType=INTEGER}, #{selinaSalary,jdbcType=INTEGER}

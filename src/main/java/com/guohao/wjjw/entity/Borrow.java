@@ -2,7 +2,7 @@ package com.guohao.wjjw.entity;
 
 import java.util.Date;
 
-public class TBorrow {
+public class Borrow {
     private Integer borrowOrder;
 
     private Integer machineId;

@@ -2,10 +2,14 @@ package com.guohao.wjjw.entity;
 
 import java.util.Date;
 
-public class TBoss {
+public class Driver {
+    private Integer driverId;
+
     private Integer bossId;
 
-    private String bossName;
+    private Integer machineId;
+
+    private String driverName;
 
     private String password;
 
@@ -14,6 +18,8 @@ public class TBoss {
     private String sex;
 
     private Date birthday;
+
+    private Integer totalSalary;
 
     private String phoneNumber;
 
@@ -25,6 +31,14 @@ public class TBoss {
 
     private String code;
 
+    public Integer getDriverId() {
+        return driverId;
+    }
+
+    public void setDriverId(Integer driverId) {
+        this.driverId = driverId;
+    }
+
     public Integer getBossId() {
         return bossId;
     }
@@ -33,12 +47,20 @@ public class TBoss {
         this.bossId = bossId;
     }
 
-    public String getBossName() {
-        return bossName;
+    public Integer getMachineId() {
+        return machineId;
     }
 
-    public void setBossName(String bossName) {
-        this.bossName = bossName == null ? null : bossName.trim();
+    public void setMachineId(Integer machineId) {
+        this.machineId = machineId;
+    }
+
+    public String getDriverName() {
+        return driverName;
+    }
+
+    public void setDriverName(String driverName) {
+        this.driverName = driverName == null ? null : driverName.trim();
     }
 
     public String getPassword() {
@@ -71,6 +93,14 @@ public class TBoss {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    public Integer getTotalSalary() {
+        return totalSalary;
+    }
+
+    public void setTotalSalary(Integer totalSalary) {
+        this.totalSalary = totalSalary;
     }
 
     public String getPhoneNumber() {

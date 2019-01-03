@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guohao.wjjw.dao.TScooterOrderMapper">
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooterOrder">
+<mapper namespace="com.guohao.wjjw.dao.ScooterOrderDao">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.ScooterOrder">
     <id column="scooter_order_id" jdbcType="INTEGER" property="scooterOrderId" />
     <result column="start_place" jdbcType="VARCHAR" property="startPlace" />
     <result column="end_place" jdbcType="VARCHAR" property="endPlace" />
@@ -14,7 +14,7 @@
     delete from t_scooter_order
     where scooter_order_id = #{scooterOrderId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooterOrder">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.ScooterOrder">
     insert into t_scooter_order (scooter_order_id, start_place, end_place, 
       scooter_id, machine_id, order_date, 
       scooter_cost)
@@ -22,7 +22,7 @@
       #{scooterId,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, #{orderDate,jdbcType=DATE}, 
       #{scooterCost,jdbcType=INTEGER})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TScooterOrder">
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.ScooterOrder">
     update t_scooter_order
     set start_place = #{startPlace,jdbcType=VARCHAR},
       end_place = #{endPlace,jdbcType=VARCHAR},
@@ -43,7 +43,7 @@
     scooter_cost
     from t_scooter_order
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooterOrder">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.ScooterOrder">
     <result column="scooter_order_id" jdbcType="INTEGER" property="scooterOrderId" />
     <result column="start_place" jdbcType="VARCHAR" property="startPlace" />
     <result column="end_place" jdbcType="VARCHAR" property="endPlace" />
@@ -52,7 +52,7 @@
     <result column="order_date" jdbcType="DATE" property="orderDate" />
     <result column="scooter_cost" jdbcType="INTEGER" property="scooterCost" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooterOrder">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.ScooterOrder">
     insert into t_scooter_order (scooter_order_id, start_place, end_place, 
       scooter_id, machine_id, order_date, 
       scooter_cost)
@@ -65,7 +65,7 @@
     scooter_cost
     from t_scooter_order
   </select>
-  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooterOrder">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.ScooterOrder">
     <result column="scooter_order_id" jdbcType="INTEGER" property="scooterOrderId" />
     <result column="start_place" jdbcType="VARCHAR" property="startPlace" />
     <result column="end_place" jdbcType="VARCHAR" property="endPlace" />
@@ -74,7 +74,7 @@
     <result column="order_date" jdbcType="DATE" property="orderDate" />
     <result column="scooter_cost" jdbcType="INTEGER" property="scooterCost" />
   </resultMap>
-  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooterOrder">
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.ScooterOrder">
     insert into t_scooter_order (scooter_order_id, start_place, end_place, 
       scooter_id, machine_id, order_date, 
       scooter_cost)

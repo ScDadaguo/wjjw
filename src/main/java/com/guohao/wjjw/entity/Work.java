@@ -3,7 +3,7 @@ package com.guohao.wjjw.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class TWork {
+public class Work {
     private Integer workId;
 
     private Integer driverId;
