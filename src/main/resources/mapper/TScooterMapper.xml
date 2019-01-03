@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guohao.wjjw.dao.TScooterMapper">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooter">
+    <id column="scooter_id" jdbcType="INTEGER" property="scooterId" />
+    <result column="Scooter_name" jdbcType="VARCHAR" property="scooterName" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="model_number" jdbcType="VARCHAR" property="modelNumber" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_scooter
+    where scooter_id = #{scooterId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooter">
+    insert into t_scooter (scooter_id, Scooter_name, phone_number, 
+      model_number)
+    values (#{scooterId,jdbcType=INTEGER}, #{scooterName,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{modelNumber,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TScooter">
+    update t_scooter
+    set Scooter_name = #{scooterName,jdbcType=VARCHAR},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      model_number = #{modelNumber,jdbcType=VARCHAR}
+    where scooter_id = #{scooterId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select scooter_id, Scooter_name, phone_number, model_number
+    from t_scooter
+    where scooter_id = #{scooterId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select scooter_id, Scooter_name, phone_number, model_number
+    from t_scooter
+  </select>
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooter">
+    <result column="scooter_id" jdbcType="INTEGER" property="scooterId" />
+    <result column="Scooter_name" jdbcType="VARCHAR" property="scooterName" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="model_number" jdbcType="VARCHAR" property="modelNumber" />
+  </resultMap>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooter">
+    insert into t_scooter (scooter_id, Scooter_name, phone_number, 
+      model_number)
+    values (#{scooterId,jdbcType=INTEGER}, #{scooterName,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{modelNumber,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select scooter_id, Scooter_name, phone_number, model_number
+    from t_scooter
+  </select>
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TScooter">
+    <result column="scooter_id" jdbcType="INTEGER" property="scooterId" />
+    <result column="Scooter_name" jdbcType="VARCHAR" property="scooterName" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="model_number" jdbcType="VARCHAR" property="modelNumber" />
+  </resultMap>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TScooter">
+    insert into t_scooter (scooter_id, Scooter_name, phone_number, 
+      model_number)
+    values (#{scooterId,jdbcType=INTEGER}, #{scooterName,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{modelNumber,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select scooter_id, Scooter_name, phone_number, model_number
+    from t_scooter
+  </select>
+</mapper>

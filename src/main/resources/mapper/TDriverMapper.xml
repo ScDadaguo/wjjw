@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guohao.wjjw.dao.TDriverMapper">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TDriver">
+    <id column="driver_id" jdbcType="INTEGER" property="driverId" />
+    <result column="boss_id" jdbcType="INTEGER" property="bossId" />
+    <result column="machine_id" jdbcType="INTEGER" property="machineId" />
+    <result column="driver_name" jdbcType="VARCHAR" property="driverName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="total_salary" jdbcType="INTEGER" property="totalSalary" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="avata_url" jdbcType="VARCHAR" property="avataUrl" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_driver
+    where driver_id = #{driverId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TDriver">
+    insert into t_driver (driver_id, boss_id, machine_id, 
+      driver_name, password, age, 
+      sex, birthday, total_salary, 
+      phone_number, avata_url, city, 
+      nick_name, code)
+    values (#{driverId,jdbcType=INTEGER}, #{bossId,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, 
+      #{driverName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, 
+      #{sex,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{totalSalary,jdbcType=INTEGER}, 
+      #{phoneNumber,jdbcType=VARCHAR}, #{avataUrl,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{nickName,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TDriver">
+    update t_driver
+    set boss_id = #{bossId,jdbcType=INTEGER},
+      machine_id = #{machineId,jdbcType=INTEGER},
+      driver_name = #{driverName,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      sex = #{sex,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=DATE},
+      total_salary = #{totalSalary,jdbcType=INTEGER},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      avata_url = #{avataUrl,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR}
+    where driver_id = #{driverId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select driver_id, boss_id, machine_id, driver_name, password, age, sex, birthday, 
+    total_salary, phone_number, avata_url, city, nick_name, code
+    from t_driver
+    where driver_id = #{driverId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select driver_id, boss_id, machine_id, driver_name, password, age, sex, birthday, 
+    total_salary, phone_number, avata_url, city, nick_name, code
+    from t_driver
+  </select>
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TDriver">
+    <result column="driver_id" jdbcType="INTEGER" property="driverId" />
+    <result column="boss_id" jdbcType="INTEGER" property="bossId" />
+    <result column="machine_id" jdbcType="INTEGER" property="machineId" />
+    <result column="driver_name" jdbcType="VARCHAR" property="driverName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="total_salary" jdbcType="INTEGER" property="totalSalary" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="avata_url" jdbcType="VARCHAR" property="avataUrl" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+  </resultMap>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TDriver">
+    insert into t_driver (driver_id, boss_id, machine_id, 
+      driver_name, password, age, 
+      sex, birthday, total_salary, 
+      phone_number, avata_url, city, 
+      nick_name, code)
+    values (#{driverId,jdbcType=INTEGER}, #{bossId,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, 
+      #{driverName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, 
+      #{sex,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{totalSalary,jdbcType=INTEGER}, 
+      #{phoneNumber,jdbcType=VARCHAR}, #{avataUrl,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{nickName,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select driver_id, boss_id, machine_id, driver_name, password, age, sex, birthday, 
+    total_salary, phone_number, avata_url, city, nick_name, code
+    from t_driver
+  </select>
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TDriver">
+    <result column="driver_id" jdbcType="INTEGER" property="driverId" />
+    <result column="boss_id" jdbcType="INTEGER" property="bossId" />
+    <result column="machine_id" jdbcType="INTEGER" property="machineId" />
+    <result column="driver_name" jdbcType="VARCHAR" property="driverName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="total_salary" jdbcType="INTEGER" property="totalSalary" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="avata_url" jdbcType="VARCHAR" property="avataUrl" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+  </resultMap>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TDriver">
+    insert into t_driver (driver_id, boss_id, machine_id, 
+      driver_name, password, age, 
+      sex, birthday, total_salary, 
+      phone_number, avata_url, city, 
+      nick_name, code)
+    values (#{driverId,jdbcType=INTEGER}, #{bossId,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, 
+      #{driverName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, 
+      #{sex,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{totalSalary,jdbcType=INTEGER}, 
+      #{phoneNumber,jdbcType=VARCHAR}, #{avataUrl,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{nickName,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select driver_id, boss_id, machine_id, driver_name, password, age, sex, birthday, 
+    total_salary, phone_number, avata_url, city, nick_name, code
+    from t_driver
+  </select>
+</mapper>

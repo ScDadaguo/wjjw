@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guohao.wjjw.dao.TWorkMapper">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TWork">
+    <id column="work_id" jdbcType="INTEGER" property="workId" />
+    <result column="driver_id" jdbcType="INTEGER" property="driverId" />
+    <result column="machine_id" jdbcType="INTEGER" property="machineId" />
+    <result column="site" jdbcType="VARCHAR" property="site" />
+    <result column="employer" jdbcType="VARCHAR" property="employer" />
+    <result column="Constructors" jdbcType="VARCHAR" property="constructors" />
+    <result column="actual_hours" jdbcType="DECIMAL" property="actualHours" />
+    <result column="invoice_hours" jdbcType="VARCHAR" property="invoiceHours" />
+    <result column="diesel_cost" jdbcType="INTEGER" property="dieselCost" />
+    <result column="work_date" jdbcType="DATE" property="workDate" />
+    <result column="cash" jdbcType="INTEGER" property="cash" />
+    <result column="scooter_order_id" jdbcType="INTEGER" property="scooterOrderId" />
+    <result column="hourly_wage" jdbcType="INTEGER" property="hourlyWage" />
+    <result column="receive_cash" jdbcType="INTEGER" property="receiveCash" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_work
+    where work_id = #{workId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TWork">
+    insert into t_work (work_id, driver_id, machine_id, 
+      site, employer, Constructors, 
+      actual_hours, invoice_hours, diesel_cost, 
+      work_date, cash, scooter_order_id, 
+      hourly_wage, receive_cash)
+    values (#{workId,jdbcType=INTEGER}, #{driverId,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, 
+      #{site,jdbcType=VARCHAR}, #{employer,jdbcType=VARCHAR}, #{constructors,jdbcType=VARCHAR}, 
+      #{actualHours,jdbcType=DECIMAL}, #{invoiceHours,jdbcType=VARCHAR}, #{dieselCost,jdbcType=INTEGER}, 
+      #{workDate,jdbcType=DATE}, #{cash,jdbcType=INTEGER}, #{scooterOrderId,jdbcType=INTEGER}, 
+      #{hourlyWage,jdbcType=INTEGER}, #{receiveCash,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TWork">
+    update t_work
+    set driver_id = #{driverId,jdbcType=INTEGER},
+      machine_id = #{machineId,jdbcType=INTEGER},
+      site = #{site,jdbcType=VARCHAR},
+      employer = #{employer,jdbcType=VARCHAR},
+      Constructors = #{constructors,jdbcType=VARCHAR},
+      actual_hours = #{actualHours,jdbcType=DECIMAL},
+      invoice_hours = #{invoiceHours,jdbcType=VARCHAR},
+      diesel_cost = #{dieselCost,jdbcType=INTEGER},
+      work_date = #{workDate,jdbcType=DATE},
+      cash = #{cash,jdbcType=INTEGER},
+      scooter_order_id = #{scooterOrderId,jdbcType=INTEGER},
+      hourly_wage = #{hourlyWage,jdbcType=INTEGER},
+      receive_cash = #{receiveCash,jdbcType=INTEGER}
+    where work_id = #{workId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select work_id, driver_id, machine_id, site, employer, Constructors, actual_hours, 
+    invoice_hours, diesel_cost, work_date, cash, scooter_order_id, hourly_wage, receive_cash
+    from t_work
+    where work_id = #{workId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select work_id, driver_id, machine_id, site, employer, Constructors, actual_hours, 
+    invoice_hours, diesel_cost, work_date, cash, scooter_order_id, hourly_wage, receive_cash
+    from t_work
+  </select>
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TWork">
+    <result column="work_id" jdbcType="INTEGER" property="workId" />
+    <result column="driver_id" jdbcType="INTEGER" property="driverId" />
+    <result column="machine_id" jdbcType="INTEGER" property="machineId" />
+    <result column="site" jdbcType="VARCHAR" property="site" />
+    <result column="employer" jdbcType="VARCHAR" property="employer" />
+    <result column="Constructors" jdbcType="VARCHAR" property="constructors" />
+    <result column="actual_hours" jdbcType="DECIMAL" property="actualHours" />
+    <result column="invoice_hours" jdbcType="VARCHAR" property="invoiceHours" />
+    <result column="diesel_cost" jdbcType="INTEGER" property="dieselCost" />
+    <result column="work_date" jdbcType="DATE" property="workDate" />
+    <result column="cash" jdbcType="INTEGER" property="cash" />
+    <result column="scooter_order_id" jdbcType="INTEGER" property="scooterOrderId" />
+    <result column="hourly_wage" jdbcType="INTEGER" property="hourlyWage" />
+    <result column="receive_cash" jdbcType="INTEGER" property="receiveCash" />
+  </resultMap>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TWork">
+    insert into t_work (work_id, driver_id, machine_id, 
+      site, employer, Constructors, 
+      actual_hours, invoice_hours, diesel_cost, 
+      work_date, cash, scooter_order_id, 
+      hourly_wage, receive_cash)
+    values (#{workId,jdbcType=INTEGER}, #{driverId,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, 
+      #{site,jdbcType=VARCHAR}, #{employer,jdbcType=VARCHAR}, #{constructors,jdbcType=VARCHAR}, 
+      #{actualHours,jdbcType=DECIMAL}, #{invoiceHours,jdbcType=VARCHAR}, #{dieselCost,jdbcType=INTEGER}, 
+      #{workDate,jdbcType=DATE}, #{cash,jdbcType=INTEGER}, #{scooterOrderId,jdbcType=INTEGER}, 
+      #{hourlyWage,jdbcType=INTEGER}, #{receiveCash,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select work_id, driver_id, machine_id, site, employer, Constructors, actual_hours, 
+    invoice_hours, diesel_cost, work_date, cash, scooter_order_id, hourly_wage, receive_cash
+    from t_work
+  </select>
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TWork">
+    <result column="work_id" jdbcType="INTEGER" property="workId" />
+    <result column="driver_id" jdbcType="INTEGER" property="driverId" />
+    <result column="machine_id" jdbcType="INTEGER" property="machineId" />
+    <result column="site" jdbcType="VARCHAR" property="site" />
+    <result column="employer" jdbcType="VARCHAR" property="employer" />
+    <result column="Constructors" jdbcType="VARCHAR" property="constructors" />
+    <result column="actual_hours" jdbcType="DECIMAL" property="actualHours" />
+    <result column="invoice_hours" jdbcType="VARCHAR" property="invoiceHours" />
+    <result column="diesel_cost" jdbcType="INTEGER" property="dieselCost" />
+    <result column="work_date" jdbcType="DATE" property="workDate" />
+    <result column="cash" jdbcType="INTEGER" property="cash" />
+    <result column="scooter_order_id" jdbcType="INTEGER" property="scooterOrderId" />
+    <result column="hourly_wage" jdbcType="INTEGER" property="hourlyWage" />
+    <result column="receive_cash" jdbcType="INTEGER" property="receiveCash" />
+  </resultMap>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TWork">
+    insert into t_work (work_id, driver_id, machine_id, 
+      site, employer, Constructors, 
+      actual_hours, invoice_hours, diesel_cost, 
+      work_date, cash, scooter_order_id, 
+      hourly_wage, receive_cash)
+    values (#{workId,jdbcType=INTEGER}, #{driverId,jdbcType=INTEGER}, #{machineId,jdbcType=INTEGER}, 
+      #{site,jdbcType=VARCHAR}, #{employer,jdbcType=VARCHAR}, #{constructors,jdbcType=VARCHAR}, 
+      #{actualHours,jdbcType=DECIMAL}, #{invoiceHours,jdbcType=VARCHAR}, #{dieselCost,jdbcType=INTEGER}, 
+      #{workDate,jdbcType=DATE}, #{cash,jdbcType=INTEGER}, #{scooterOrderId,jdbcType=INTEGER}, 
+      #{hourlyWage,jdbcType=INTEGER}, #{receiveCash,jdbcType=INTEGER})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select work_id, driver_id, machine_id, site, employer, Constructors, actual_hours, 
+    invoice_hours, diesel_cost, work_date, cash, scooter_order_id, hourly_wage, receive_cash
+    from t_work
+  </select>
+</mapper>

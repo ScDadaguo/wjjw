@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guohao.wjjw.dao.TBossMapper">
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TBoss">
+    <id column="boss_id" jdbcType="INTEGER" property="bossId" />
+    <result column="boss_name" jdbcType="VARCHAR" property="bossName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="avata_url" jdbcType="VARCHAR" property="avataUrl" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_boss
+    where boss_id = #{bossId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TBoss">
+    insert into t_boss (boss_id, boss_name, password, 
+      age, sex, birthday, phone_number, 
+      avata_url, city, nick_name, 
+      code)
+    values (#{bossId,jdbcType=INTEGER}, #{bossName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{sex,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{avataUrl,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, 
+      #{code,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.guohao.wjjw.entity.TBoss">
+    update t_boss
+    set boss_name = #{bossName,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      sex = #{sex,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=DATE},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      avata_url = #{avataUrl,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR}
+    where boss_id = #{bossId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select boss_id, boss_name, password, age, sex, birthday, phone_number, avata_url, 
+    city, nick_name, code
+    from t_boss
+    where boss_id = #{bossId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select boss_id, boss_name, password, age, sex, birthday, phone_number, avata_url, 
+    city, nick_name, code
+    from t_boss
+  </select>
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TBoss">
+    <result column="boss_id" jdbcType="INTEGER" property="bossId" />
+    <result column="boss_name" jdbcType="VARCHAR" property="bossName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="avata_url" jdbcType="VARCHAR" property="avataUrl" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+  </resultMap>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TBoss">
+    insert into t_boss (boss_id, boss_name, password, 
+      age, sex, birthday, phone_number, 
+      avata_url, city, nick_name, 
+      code)
+    values (#{bossId,jdbcType=INTEGER}, #{bossName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{sex,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{avataUrl,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, 
+      #{code,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select boss_id, boss_name, password, age, sex, birthday, phone_number, avata_url, 
+    city, nick_name, code
+    from t_boss
+  </select>
+  <resultMap id="BaseResultMap" type="com.guohao.wjjw.entity.TBoss">
+    <result column="boss_id" jdbcType="INTEGER" property="bossId" />
+    <result column="boss_name" jdbcType="VARCHAR" property="bossName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="avata_url" jdbcType="VARCHAR" property="avataUrl" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+  </resultMap>
+  <insert id="insert" parameterType="com.guohao.wjjw.entity.TBoss">
+    insert into t_boss (boss_id, boss_name, password, 
+      age, sex, birthday, phone_number, 
+      avata_url, city, nick_name, 
+      code)
+    values (#{bossId,jdbcType=INTEGER}, #{bossName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{sex,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{phoneNumber,jdbcType=VARCHAR}, 
+      #{avataUrl,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, 
+      #{code,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select boss_id, boss_name, password, age, sex, birthday, phone_number, avata_url, 
+    city, nick_name, code
+    from t_boss
+  </select>
+</mapper>
